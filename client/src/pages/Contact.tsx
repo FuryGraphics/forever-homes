@@ -4,23 +4,24 @@
   Target KW: Free Roof Inspection Tampa Bay FL
 */
 
-import { useState } from "react";
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { FadeUp } from "@/components/SharedComponents";
 import { Phone, Mail, MapPin, Clock, CheckCircle, Star } from "lucide-react";
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "", phone: "", email: "", service: "", message: ""
-  });
-  const [submitted, setSubmitted] = useState(false);
+const FORM_EMBED_SCRIPT_ID = "leadconnector-form-embed";
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Form submission placeholder — wire to email service or backend
-    setSubmitted(true);
-  };
+export default function Contact() {
+  // Load the LeadConnector form embed script (handles iframe auto-resizing).
+  useEffect(() => {
+    if (document.getElementById(FORM_EMBED_SCRIPT_ID)) return;
+    const script = document.createElement("script");
+    script.id = FORM_EMBED_SCRIPT_ID;
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <div style={{ background: "#0a0a0a", minHeight: "100vh" }}>
@@ -51,78 +52,23 @@ export default function Contact() {
             <FadeUp>
               <div className="dark-card p-8">
                 <h2 className="font-['DM_Sans'] font-700 text-white text-2xl mb-6">Send Us a Message</h2>
-                {submitted ? (
-                  <div className="text-center py-12">
-                    <CheckCircle size={48} className="text-[#C0C0C0] mx-auto mb-4" />
-                    <h3 className="font-['DM_Sans'] font-700 text-white text-xl mb-2">Message Sent!</h3>
-                    <p className="font-['Inter'] text-[#888888] text-sm">We'll be in touch within 24 hours. For urgent matters, call us directly at (813) 590-1892.</p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <label className="block font-['Inter'] text-[#888888] text-xs mb-1.5 tracking-wide uppercase">Full Name *</label>
-                      <input
-                        type="text"
-                        required
-                        className="form-input"
-                        placeholder="Your full name"
-                        value={formData.name}
-                        onChange={e => setFormData({...formData, name: e.target.value})}
-                      />
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block font-['Inter'] text-[#888888] text-xs mb-1.5 tracking-wide uppercase">Phone *</label>
-                        <input
-                          type="tel"
-                          required
-                          className="form-input"
-                          placeholder="(813) 000-0000"
-                          value={formData.phone}
-                          onChange={e => setFormData({...formData, phone: e.target.value})}
-                        />
-                      </div>
-                      <div>
-                        <label className="block font-['Inter'] text-[#888888] text-xs mb-1.5 tracking-wide uppercase">Email</label>
-                        <input
-                          type="email"
-                          className="form-input"
-                          placeholder="your@email.com"
-                          value={formData.email}
-                          onChange={e => setFormData({...formData, email: e.target.value})}
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label className="block font-['Inter'] text-[#888888] text-xs mb-1.5 tracking-wide uppercase">Service Needed</label>
-                      <select
-                        className="form-input"
-                        value={formData.service}
-                        onChange={e => setFormData({...formData, service: e.target.value})}
-                      >
-                        <option value="">Select a service...</option>
-                        <option value="roof-restoration">Roof Restoration</option>
-                        <option value="leak-repair">Roof Leak Repair</option>
-                        <option value="storm-damage">Storm Damage Repair</option>
-                        <option value="waterproofing">Waterproofing</option>
-                        <option value="cement-waterproofing">Cement Waterproofing</option>
-                        <option value="fence-installation">Fence Installation</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block font-['Inter'] text-[#888888] text-xs mb-1.5 tracking-wide uppercase">Message</label>
-                      <textarea
-                        rows={4}
-                        className="form-input resize-none"
-                        placeholder="Describe your project or concern..."
-                        value={formData.message}
-                        onChange={e => setFormData({...formData, message: e.target.value})}
-                      />
-                    </div>
-                    <button type="submit" className="btn-silver w-full text-center">Send Message</button>
-                  </form>
-                )}
+                <iframe
+                  src="https://api.leadconnectorhq.com/widget/form/HtxhvqxJj4Ol1hE6bO5T"
+                  style={{ width: "100%", height: "503px", border: "none", borderRadius: "10px" }}
+                  id="inline-HtxhvqxJj4Ol1hE6bO5T"
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="Website Form (Forever Home Roof Restoration LLC)"
+                  data-height="503"
+                  data-layout-iframe-id="inline-HtxhvqxJj4Ol1hE6bO5T"
+                  data-form-id="HtxhvqxJj4Ol1hE6bO5T"
+                  title="Website Form (Forever Home Roof Restoration LLC)"
+                />
               </div>
             </FadeUp>
 
