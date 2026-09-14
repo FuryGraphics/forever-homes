@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { FadeUp, Breadcrumb, CTASection, ProcessSteps, FAQAccordion } from "@/components/SharedComponents";
 
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663703679771/ApJ6SdkeL34TeQYn6cKeZ7/hero-fence-W82wNmCo4FibejnDSc4QaG.webp";
+const HERO_BG = "/images/hero-fence.webp";
 
 const steps = [
   { number: "01", title: "Free Estimate", description: "We visit your property, take measurements, discuss your goals and budget, and provide a detailed written estimate — no pressure." },

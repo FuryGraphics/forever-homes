@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { FadeUp, CTASection } from "@/components/SharedComponents";
 
-const ABOUT_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663703679771/ApJ6SdkeL34TeQYn6cKeZ7/hero-about-LWmZMzG76qTVUmpCDETzGL.webp";
+const ABOUT_BG = "/images/hero-about.webp";
 
 const values = [
   { title: "Quality Workmanship", desc: "Every job is completed to the highest standard — no shortcuts, no cutting corners. We use professional-grade materials and proven techniques on every project." },

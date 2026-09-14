@@ -18,7 +18,7 @@ import {
   ServiceCardsGrid,
 } from "@/components/SharedComponents";
 
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663703679771/ApJ6SdkeL34TeQYn6cKeZ7/hero-roof-restoration-Pa6MtvUZAXpsBpEQJUSXvJ.webp";
+const HERO_BG = "/images/hero-roof-restoration.webp";
 
 const services = [
   {
@@ -204,7 +204,7 @@ export default function Home() {
               <div
                 className="relative aspect-[4/5] rounded-sm overflow-hidden"
                 style={{
-                  background: `url('https://d2xsxph8kpxj0f.cloudfront.net/310519663703679771/ApJ6SdkeL34TeQYn6cKeZ7/hero-about-LWmZMzG76qTVUmpCDETzGL.webp') center/cover no-repeat`,
+                  background: `url('/images/hero-about.webp') center/cover no-repeat`,
                   border: "1px solid #1a1a1a",
                 }}
               >

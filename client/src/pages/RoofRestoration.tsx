@@ -15,7 +15,7 @@ import {
   ServiceCardsGrid,
 } from "@/components/SharedComponents";
 
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663703679771/ApJ6SdkeL34TeQYn6cKeZ7/hero-roof-restoration-Pa6MtvUZAXpsBpEQJUSXvJ.webp";
+const HERO_BG = "/images/hero-roof-restoration.webp";
 
 const subServices = [
   { number: "01", title: "Roof Leak Repair", description: "Fast, accurate leak detection and repair before water damage spreads through your home.", href: "/roof-restoration/leak-repair" },

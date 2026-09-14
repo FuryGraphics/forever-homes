@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { FadeUp, Breadcrumb, CTASection, ProcessSteps, FAQAccordion } from "@/components/SharedComponents";
 
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663703679771/ApJ6SdkeL34TeQYn6cKeZ7/hero-roof-restoration-Pa6MtvUZAXpsBpEQJUSXvJ.webp";
+const HERO_BG = "/images/hero-roof-restoration.webp";
 
 const steps = [
   { number: "01", title: "Leak Detection", description: "We use systematic inspection techniques to trace leaks to their true source — not just where the water shows up inside." },

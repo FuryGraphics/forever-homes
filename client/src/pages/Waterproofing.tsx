@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { FadeUp, Breadcrumb, CTASection, ProcessSteps, ServiceCardsGrid } from "@/components/SharedComponents";
 
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663703679771/ApJ6SdkeL34TeQYn6cKeZ7/hero-waterproofing-VDdMLzLAU7VHQrgE4uKmYF.webp";
+const HERO_BG = "/images/hero-waterproofing.webp";
 
 const subServices = [
   { number: "01", title: "Roof Waterproofing", description: "Protective coatings and membranes for flat and low-slope roofs — built for Florida's rainfall and UV exposure.", href: "/waterproofing" },
