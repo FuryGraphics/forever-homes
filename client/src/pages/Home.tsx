@@ -199,22 +199,8 @@ export default function Home() {
       {/* About Section */}
       <section style={{ background: "#0a0a0a" }}>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+          <div className="max-w-3xl">
             <FadeUp>
-              <div
-                className="relative aspect-[4/5] rounded-sm overflow-hidden"
-                style={{
-                  background: `url('/images/hero-about.webp') center/cover no-repeat`,
-                  border: "1px solid #1a1a1a",
-                }}
-              >
-                <div className="absolute bottom-0 left-0 right-0 p-6" style={{ background: "linear-gradient(to top, rgba(10,10,10,0.9), transparent)" }}>
-                  <div className="font-['DM_Sans'] font-700 text-white text-lg">Dominique Joseph</div>
-                  <div className="font-['Inter'] text-[#C0C0C0] text-xs tracking-[0.1em] uppercase mt-0.5">Owner, Forever Home Roof Restoration</div>
-                </div>
-              </div>
-            </FadeUp>
-            <FadeUp delay={120}>
               <p className="section-label mb-3">About the Owner</p>
               <h2 className="font-['DM_Sans'] font-700 text-white text-3xl sm:text-4xl mb-5">
                 Meet Dominique Joseph

@@ -45,25 +45,8 @@ export default function About() {
       {/* Bio Section */}
       <section style={{ background: "#0a0a0a" }}>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+          <div className="max-w-3xl">
             <FadeUp>
-              <div
-                className="relative rounded-sm overflow-hidden"
-                style={{
-                  aspectRatio: "4/5",
-                  background: `url('${ABOUT_BG}') center/cover no-repeat`,
-                  border: "1px solid #1a1a1a",
-                }}
-              >
-                <div className="absolute bottom-0 left-0 right-0 p-6" style={{ background: "linear-gradient(to top, rgba(10,10,10,0.95), transparent)" }}>
-                  <div className="font-['DM_Sans'] font-700 text-white text-xl">Dominique Joseph</div>
-                  <div className="font-['Inter'] text-[#C0C0C0] text-xs tracking-[0.1em] uppercase mt-1">Owner & Lead Contractor</div>
-                  <div className="font-['Inter'] text-[#888888] text-xs mt-0.5">Forever Home Roof Restoration LLC</div>
-                </div>
-              </div>
-            </FadeUp>
-
-            <FadeUp delay={120}>
               <p className="section-label mb-3">The Story</p>
               <h2 className="font-['DM_Sans'] font-700 text-white text-3xl sm:text-4xl mb-6">A Contractor You Can Trust</h2>
               <div className="space-y-4 font-['Inter'] text-[#888888] text-base leading-relaxed mb-8">
